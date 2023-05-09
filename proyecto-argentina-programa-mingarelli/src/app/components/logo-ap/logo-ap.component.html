@@ -1,2 +1,23 @@
-<img src="../../../assets/imagenes/APLogo.png" id="logoArgentinaPrograma">
-<button class="btn btn-primary"> Bootstrap</button>
+<div class="row">
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/imagenes/APLogo.png" id="logoArgentinaPrograma">
+
+    </div>
+      <div class="redes">
+        <div>
+          <a href=""><img src="../../../assets/imagenes/facebook.png"></a>
+          <a href=""><img src="../../../assets/imagenes/github.png"></a>
+          <a href=""><img src="../../../assets/imagenes/instagram.png"></a>
+          <a href=""><img src="../../../assets/imagenes/linkedin.png"></a>
+          <a href=""><img src="../../../assets/imagenes/twitter.png"></a>
+
+        </div>
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-outline-light"(click)="login()"*ngIf="!isLogged">ingreso</button>
+      <button class="btn btn-outline-light"(click)="onLogOut()"*ngIf="isLogged">cerrar sesion</button>
+    </div>
+  </div>
+</div>
+

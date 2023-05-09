@@ -18,6 +18,6 @@ skillList:ISkill[]=[
   {porcent:50,
     imageUrl:"assets/imagenes/git.png"
   }
-  
+
 ]
 }

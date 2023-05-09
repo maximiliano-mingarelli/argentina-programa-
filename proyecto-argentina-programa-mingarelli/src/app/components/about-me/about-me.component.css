@@ -15,7 +15,7 @@ color: aliceblue;
     position:absolute;
     width: 15%;
     border-radius: 100%;
-    box-shadow: 4px 4px 4px white;
+    box-shadow: 4px 4px 4px #010c1c;
     left: 3%;
   }
 
@@ -25,7 +25,7 @@ color: aliceblue;
     position:absolute;
     width: 40%;
     border-radius: 100%;
-    box-shadow: 4px 4px 4px white;
+    box-shadow: 4px 4px 4px #010c1c;
     left: 30%;
     top: 400px;
   }
