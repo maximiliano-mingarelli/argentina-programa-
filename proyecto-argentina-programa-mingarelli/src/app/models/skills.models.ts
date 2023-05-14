@@ -1,5 +1,5 @@
 export interface ISkill{
-  imageUrl:string;
+  nombre:string;
   porcent:number;
 }
 
