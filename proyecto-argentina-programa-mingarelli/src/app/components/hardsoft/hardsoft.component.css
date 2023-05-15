@@ -1,11 +1,12 @@
-.row{
+.circulo{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-hardsoft{
+  width: 100%;
   background-color: rgb(38, 111, 175);
   padding: 20px;
   font-size: 2.5rem;
-
-}
-.circulo{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
 }

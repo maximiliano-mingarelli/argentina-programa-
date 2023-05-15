@@ -8,15 +8,37 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
+  getPersonaById(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
 URL = 'http://localhost:8080/persona';
 
-  constructor(private http: HttpClient) { }
+  //constructor(private http: HttpClient) { }
+  constructor(private httpClient : HttpClient) {}
+  public lista(): Observable<persona[]>{
+    return this.httpClient.get<persona[]>(this.URL + 'lista');
+ }
+ public detail(id: number):Observable<persona>{
+  return this.httpClient.get<persona>(this.URL + (`/detail/${id}`));
+ }
+ //public save (educacion: persona):Observable<any>{
+  //return this.httpClient.post<any>(this.URL + 'create', educacion);
+ //}
+ public update(id:number, Persona : persona):Observable<any>{
+  return this.httpClient.put<any>(this.URL + `/update/${id}`,Persona);
+ }
+// public delete(id:number):Observable<any>{
+  //return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+ }
 
-  public getPersonaList(): Observable<persona[]>{
-    return this.http.get<persona[]>(this.URL+'/perfil');
-  }
-  public getPersonaById(id:number):Observable<persona>{
-    return this.http.get<persona>(`${this.URL}/${id}`); // opcion 2 this.URL + "/"+id
-  }
-}
+
+
+
+  // public getPersonaList(): Observable<persona[]>{
+   // return this.http.get<persona[]>(this.URL+'/perfil');
+  //}
+  //public getPersonaById(id:number):Observable<persona>{
+    //return this.http.get<persona>(`${this.URL}/${id}`); // opcion 2 this.URL + "/"+id
+  //}
+//}
 

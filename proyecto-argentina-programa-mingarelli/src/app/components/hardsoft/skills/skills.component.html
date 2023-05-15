@@ -1,40 +1,43 @@
-<div >
+<div class="content">
   <div class="col-lg-2">
-    <button type="button" routerLink="/newskill" class="btn btn-dark" >
+    <button type="button" routerLink="/newskill" class="btn btn-dark">
       nueva skill
     </button>
   </div>
-  <div *ngFor="let skill of skill">
-  <circle-progress
-  [percent]="(skill.porcentaje)"
-  [radius]="100"
-  [space]="-5"
-  [imageSrc]="''"
-  [title]="(skill.nombre)"
-  [showTitle]="true"
-  [titleColor]="'#212F3c'"
-  [showImage]="false"
-  [showUnits]="false"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="5"
-  [innerStrokeWidth]="5"
-  [outerStrokeColor]="'#78C000'"
-  [innerStrokeColor]="'#C7E596'"
-  [imageWidth]="120" [imageHeight]="120"
-  [showBackground]="false"
-  [animationDuration]="300">
-  </circle-progress>
-  <div>
-  <td *ngIf="isLogged">
-    <button class="btn btn-dark" routerLink="/editskill/{{skill.id}}">
-    <i class="bi bi-vector-pen"></i>
-  </button>
-</td>
+  <div class="circle" *ngFor="let skill of skill">
+    <circle-progress
+      [percent]="skill.porcentaje"
+      [radius]="100"
+      [space]="-5"
+      [imageSrc]="''"
+      [title]="skill.nombre"
+      [showTitle]="true"
+      [titleColor]="'#212F3c'"
+      [showImage]="false"
+      [showUnits]="false"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="5"
+      [innerStrokeWidth]="5"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [imageWidth]="120"
+      [imageHeight]="120"
+      [showBackground]="false"
+      [animationDuration]="300"
+    >
+    </circle-progress>
+    <div class="botones-circle">
+      <td *ngIf="isLogged">
+        <button class="btn btn-dark" routerLink="/editskill/{{ skill.id }}">
+          <i class="bi bi-vector-pen"></i>
+        </button>
+      </td>
 
- <td *ngIf="isLogged">
-  <button class="btn btn-danger" (click)="delete(skill.id)">
-    <i class="bi bi-trash3-fill"></i>BORRAR</button>
-</td>
-</div>
-</div>
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(skill.id)">
+          <i class="bi bi-trash3-fill"></i>BORRAR
+        </button>
+      </td>
+    </div>
+  </div>
 </div>
