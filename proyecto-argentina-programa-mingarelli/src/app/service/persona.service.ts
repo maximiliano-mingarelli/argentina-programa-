@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { persona } from '../model/persona.model';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 
 
 @Injectable({
@@ -11,7 +13,7 @@ export class PersonaService {
   getPersonaById(arg0: number) {
     throw new Error('Method not implemented.');
   }
-URL = 'http://localhost:8080/persona';
+URL = environment.apiUrl + '/persona';
 
   //constructor(private http: HttpClient) { }
   constructor(private httpClient : HttpClient) {}

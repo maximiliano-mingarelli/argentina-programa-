@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Experiencia } from '../model/experiencia';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class SExperienciaService {
   detail(id: any) {
     throw new Error('Method not implemented.');
   }
-  expURL = 'http://localhost:8080/explab/'
+  expURL = environment.apiUrl +'/explab/'
   constructor(private httpClient: HttpClient) {}
     public lista():Observable<Experiencia[]>{
       return this.httpClient.get<Experiencia[]>(this.expURL + 'lista')
