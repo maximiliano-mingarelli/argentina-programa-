@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'localhost:/8080',
+  apiUrl: 'https://backendmm-zwkn.onrender.com',
 };
