@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionService {
 
-  URL = environment.apiUrl +'educacion/'
+  URL = environment.apiUrl +'/educacion/'
   constructor(private httpClient : HttpClient) {}
     public lista(): Observable<Educacion[]>{
       return this.httpClient.get<Educacion[]>(this.URL + 'lista');
